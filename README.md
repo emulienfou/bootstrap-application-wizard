@@ -15,7 +15,7 @@ Special Thanks
 * [Shabbir Karimi](https://github.com/shabbirkarimi)
 
 Update bootstrap v3.x
-* [Gert-Jan Timmer] (https://github.com/GJRTimmer)
+* [Gert-Jan Timmer](https://github.com/GJRTimmer)
 
 Update to Bootstrap v4.x
 * [David Sanchez](http://davidsanchez.me)
