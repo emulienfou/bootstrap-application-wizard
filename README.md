@@ -33,8 +33,8 @@ Contributors
 
 Dependencies
 ------------
-* jQuery 2.x
-* Bootstrap 3.x
+* jQuery 3.3.x
+* Bootstrap 4.x
  
 Installation
 ------------
