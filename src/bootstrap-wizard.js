@@ -93,7 +93,7 @@
             var a = $('<a class="wizard-nav-link"></a>');
             a.data("navindex", i);
             li.append(a);
-            a.append('<span class="glyphicon glyphicon-chevron-right"></span> ');
+            a.append('<i class="fas fa-chevron-right"></i> ');
             a.append(name);
             return li;
         },
@@ -374,43 +374,40 @@
         
         /* TEMPLATE */
         this.wizard_template = [
-            '<div  class="modal fade wizard">',
-                '<div class="modal-dialog wizard-dialog">',
+            '<div  class="modal fade wizard" tabindex="-1" role="dialog">',
+                '<div class="modal-dialog modal-lg wizard-dialog" role="document">',
                     '<div class="modal-content wizard-content">',
-                        '<div class="modal-header wizard-header">',
-                            '<button type="button" class="close wizard-close" aria-hidden="true">&times;</button>',
-                            '<h3 class="modal-title wizard-title"></h3>',
+                        '<div class="modal-header wizard-header flex-row align-items-center">',
+			                      '<h5 class="modal-title wizard-title font-weight-bold"></h5>',
                             '<span class="wizard-subtitle"></span>',
+                            '<button type="button" class="close wizard-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>',
                         '</div>',
-                        '<div class="modal-body wizard-body">',
-                            '<div class="pull-left wizard-steps">',
+                        '<form class="modal-body wizard-body">',
+                            '<div class="float-left wizard-steps">',
                                 '<div class="wizard-nav-container">',
                                     '<ul class="nav wizard-nav-list">',
                                     '</ul>',
                                 '</div>',
                                 '<div class="wizard-progress-container">',
                                     '<div class="progress progress-striped">',
-                                        '<div class="progress-bar" style="width: 0%;"></div>',
+                                        '<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%;"></div>',
                                     '</div>',
                                 '</div>',
                             '</div>',
-                            '<form>',
                                 '<div class="wizard-cards">',
                                     '<div class="wizard-card-container">',
                                     '</div>',
                                     '<div class="wizard-footer">',
                                         '<div class="wizard-buttons-container">',
                                             '<button class="btn wizard-cancel wizard-close" type="button">Cancel</button>',
-                                            '<div class="btn-group-single pull-right">',
+                                            '<div class="btn-group-single float-right">',
                                                 '<button class="btn wizard-back" type="button">Back</button>',
                                                 '<button class="btn btn-primary wizard-next" type="button">Next</button>',
                                             '</div>',
                                         '</div>',
                                     '</div>',
                                 '</div>',
-                            '</form>',
-                        '</div>',
-                    
+                        '</form>',
                     '</div>',
                 '</div>',
             '</div>'
@@ -617,20 +614,7 @@
         
         destroyPopover: function(pop) {
             pop = $(pop);
-            
-            /*
-             * this is the element that the popover was created for
-             */
-            try {
-                pop.popover("destroy");
-            }
-            /*
-             * older versions of bootstrap don't have a destroy call
-             * for popovers
-             */
-            catch (e) {
-                pop.popover("hide");
-            }
+            pop.popover("dispose");
         },
         
         hidePopovers: function(el) {
