@@ -35,6 +35,7 @@ Dependencies
 ------------
 * jQuery 3.3.x
 * Bootstrap 4.x
+* FontAwesome 5.x
  
 Installation
 ------------
