@@ -1,10 +1,7 @@
-Bootstrap Application Wizard
+Bootstrap 4 Application Wizard
 ============================
 
-This project is no longer maintained.  Open issues and PRs will not be resolved.
-Please fork if you wish to maintain yourself.
-
-![Screenshot](http://i.imgur.com/e9B2Z.png)
+![Screenshot](https://i.imgur.com/wbQ8o3y.png)
 
 General
 -------
@@ -19,6 +16,9 @@ Special Thanks
 
 Update bootstrap v3.x
 * [Gert-Jan Timmer] (https://github.com/GJRTimmer)
+
+Update to Bootstrap v4.x
+* [David Sanchez](http://davidsanchez.me)
 
 Contributors
 * [Andrew Moffat] (https://github.com/amoffat)
